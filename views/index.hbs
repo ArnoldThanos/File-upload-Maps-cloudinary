@@ -1,0 +1,15 @@
+<section>
+  <a href="/map">MAP</a>
+  <h2>Upload your photo</h2>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="text" name="name">
+    <input type="file" name="photo">
+    <input type="submit" value="Save">
+  </form>
+  <section>
+    {{#each pictures}}
+      <h3>{{ this.name }}</h3>
+      <img src="{{ this.path }}" width ='400'alt="{{ this.originalName }}" />
+    {{/each}}
+  </section>
+</section>
